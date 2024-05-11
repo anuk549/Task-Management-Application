@@ -11,5 +11,6 @@ This is a task management application built for Android using Kotlin. It allows 
 - Update existing tasks.
 - Delete tasks.
 - View a list of all tasks sorted by their IDs.
+- Search Tasks
 
 
