@@ -24,9 +24,8 @@ class TaskRepository(private val taskDao: TaskDao) {
         taskDao.deleteAllTasks()
     }
 
-    fun searchTasksByName(searchQuery: String): LiveData<List<Task>> {
-        return taskDao.searchTasksByName(searchQuery)
+    fun findTaskById(taskId: Int): LiveData<Task?> {
+        return taskDao.findTaskById(taskId)
     }
-
 
 }

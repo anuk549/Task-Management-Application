@@ -45,7 +45,7 @@
     <fragment
         android:id="@+id/findFragment"
         android:name="com.example.task.fragments.Find.FindFragment"
-        android:label="fragment_find"
+        android:label="Search"
         tools:layout="@layout/fragment_find" >
         <action
             android:id="@+id/action_findFragment_to_listFragment"
