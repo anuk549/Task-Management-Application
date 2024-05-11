@@ -47,7 +47,7 @@ class AddFragment : Fragment() {
                 tName,
                 description,
                 priority,
-                deadline // Include deadline in Task object creation
+                deadline
             )
             // Add Data to Database
             mTaskViewModel.addTask(task)

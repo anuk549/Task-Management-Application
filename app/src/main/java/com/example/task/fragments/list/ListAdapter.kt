@@ -29,7 +29,7 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         holder.itemView.tName_txt.text = currentItem.tName
         holder.itemView.description_txt.text = currentItem.description
         holder.itemView.priority_txt.text = currentItem.priority
-        holder.itemView.deadline_txt.text = currentItem.deadline // Display deadline
+        holder.itemView.deadline_txt.text = currentItem.deadline
 
         holder.itemView.rowLayout.setOnClickListener {
             val action = ListFragmentDirections.actionListFragmentToUpdateFragment(currentItem)

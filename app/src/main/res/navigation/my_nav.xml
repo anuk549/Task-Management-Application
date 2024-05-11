@@ -16,6 +16,10 @@
         <action
             android:id="@+id/action_listFragment_to_updateFragment"
             app:destination="@id/updateFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_findFragment"
+            app:destination="@id/findFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/addFragment"
@@ -38,4 +42,14 @@
             android:name="currentTask"
             app:argType="com.example.task.model.Task" />
     </fragment>
+    <fragment
+        android:id="@+id/findFragment"
+        android:name="com.example.task.fragments.Find.FindFragment"
+        android:label="fragment_find"
+        tools:layout="@layout/fragment_find" >
+        <action
+            android:id="@+id/action_findFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+
 </navigation>

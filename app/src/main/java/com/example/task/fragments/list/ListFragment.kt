@@ -21,16 +21,13 @@ class ListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_list, container, false)
 
-        // Recyclerview
         val adapter = ListAdapter()
         val recyclerView = view.recyclerview
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        // TaskViewModel
         mTaskViewModel = ViewModelProvider(this).get(TaskViewModel::class.java)
         mTaskViewModel.readAllData.observe(viewLifecycleOwner, Observer { task ->
             adapter.setData(task)
@@ -39,8 +36,10 @@ class ListFragment : Fragment() {
         view.floatingActionButton.setOnClickListener {
             findNavController().navigate(R.id.action_listFragment_to_addFragment)
         }
+        view.floatingActionButton1.setOnClickListener {
+            findNavController().navigate(R.id.action_listFragment_to_findFragment)
+        }
 
-        // Add menu
         setHasOptionsMenu(true)
 
         return view
@@ -51,10 +50,13 @@ class ListFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if(item.itemId == R.id.menu_delete){
-            deleteAllTasks()
+        return when (item.itemId) {
+            R.id.menu_delete -> {
+                deleteAllTasks()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
         }
-        return super.onOptionsItemSelected(item)
     }
 
     private fun deleteAllTasks() {
@@ -64,7 +66,8 @@ class ListFragment : Fragment() {
             Toast.makeText(
                 requireContext(),
                 "Successfully removed everything",
-                Toast.LENGTH_SHORT).show()
+                Toast.LENGTH_SHORT
+            ).show()
         }
         builder.setNegativeButton("No") { _, _ -> }
         builder.setTitle("Delete everything?")
