@@ -87,6 +87,8 @@
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:text="Update"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_background"
         app:layout_constraintTop_toBottomOf="@+id/updateDeadline_et"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
