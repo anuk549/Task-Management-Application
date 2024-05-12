@@ -51,7 +51,7 @@ class UpdateFragment : Fragment() {
         val priority = updatePriority_et.text.toString()
         val deadline = updateDeadline_et.text.toString() // Retrieve deadline input
 
-        if (inputCheck(tName, description, priority)) {
+        if (inputCheck(tName, description, priority, deadline)) {
             // Create Task Object
             val updatedTask = Task(args.currentTask.id, tName, description, priority, deadline) // Include deadline
             // Update Current Task
@@ -64,8 +64,8 @@ class UpdateFragment : Fragment() {
         }
     }
 
-    private fun inputCheck(tName: String, description: String, priority: String): Boolean {
-        return !(TextUtils.isEmpty(tName) && TextUtils.isEmpty(description) && TextUtils.isEmpty(priority))
+    private fun inputCheck(tName: String, description: String, priority: String, deadline: String): Boolean {
+        return !(TextUtils.isEmpty(tName) || TextUtils.isEmpty(description) || TextUtils.isEmpty(priority) || TextUtils.isEmpty(deadline))
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
