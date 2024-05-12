@@ -1,0 +1,42 @@
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_5_12_2024_7_44_AM_[Default_Changelist]/shelved.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_5_12_2024_7_44_AM_[Default_Changelist]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_5_12_2024_7_44_AM_[Default_Changelist]/shelved.patch
+new file mode 100644
+--- /dev/null	(date 1715480057711)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_5_12_2024_7_44_AM_[Default_Changelist]/shelved.patch	(date 1715480057711)
+@@ -0,0 +1,17 @@
++Index: README.md
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+>Student ID\tIT21193118\r\nBatch\tWD.12.1\r\n\r\n# Task Management Application\r\n\r\nThis is a task management application built for Android using Kotlin. It allows users to manage their tasks by adding, updating, and deleting them. Tasks are stored in a local SQLite database using Room Persistence Library.\r\n\r\n## Features\r\n\r\n- Add new tasks with a name, description, priority, and deadline.\r\n- Update existing tasks.\r\n- Delete tasks.\r\n- View a list of all tasks sorted by their IDs.\r\n\r\n\r\n
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/README.md b/README.md
++--- a/README.md	(revision 54fa34755b2be1f601077cbc94908b1bd694034d)
+++++ b/README.md	(date 1715479805608)
++@@ -11,5 +11,6 @@
++ - Update existing tasks.
++ - Delete tasks.
++ - View a list of all tasks sorted by their IDs.
+++- Search Tasks
++ 
++ 
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_5_12_2024_7_44_AM__Default_Changelist_.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_5_12_2024_7_44_AM__Default_Changelist_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_5_12_2024_7_44_AM__Default_Changelist_.xml
+new file mode 100644
+--- /dev/null	(date 1715480108050)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_5_12_2024_7_44_AM__Default_Changelist_.xml	(date 1715480108050)
+@@ -0,0 +1,4 @@
++<changelist name="Uncommitted_changes_before_Update_at_5_12_2024_7_44_AM_[Default_Changelist]" date="1715480057717" recycled="false" toDelete="true">
++  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_12_2024_7_44_AM_[Default_Changelist]/shelved.patch" />
++  <option name="DESCRIPTION" value="Uncommitted changes before Update at 5/12/2024 7:44 AM [Default Changelist]" />
++</changelist>
+\ No newline at end of file
