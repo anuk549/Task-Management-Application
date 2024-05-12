@@ -24,6 +24,7 @@ class FindFragment : Fragment() {
     private lateinit var descriptionTextView: TextView
     private lateinit var priorityTextView: TextView
     private lateinit var deadlineTextView: TextView
+    private lateinit var noResultTextView: TextView
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -40,6 +41,10 @@ class FindFragment : Fragment() {
         descriptionTextView = view.findViewById(R.id.description_textview)
         priorityTextView = view.findViewById(R.id.priority_textview)
         deadlineTextView = view.findViewById(R.id.deadline_textview)
+        noResultTextView = view.findViewById(R.id.no_result_textview)
+
+        // Hide task details initially
+        hideTaskDetails()
 
         // Initialize ViewModel
         taskViewModel = ViewModelProvider(this).get(TaskViewModel::class.java)
@@ -55,10 +60,14 @@ class FindFragment : Fragment() {
 
     private fun searchTaskById(taskId: Int) {
         taskViewModel.findTaskById(taskId).observe(viewLifecycleOwner, Observer { task ->
-            task?.let {
-                displayTaskDetails(it)
-            } ?: run {
+            if (task != null) {
+                displayTaskDetails(task)
+                noResultTextView.visibility = View.GONE
+                showTaskDetails()
+            } else {
                 clearTaskDetails()
+                noResultTextView.visibility = View.VISIBLE
+                hideTaskDetails()
             }
         })
     }
@@ -72,10 +81,26 @@ class FindFragment : Fragment() {
     }
 
     private fun clearTaskDetails() {
-        taskIdTextView.text = "Task ID: "
-        taskNameTextView.text = "Task Name: "
-        descriptionTextView.text = "Description: "
-        priorityTextView.text = "Priority: "
-        deadlineTextView.text = "Deadline: "
+        taskIdTextView.text = ""
+        taskNameTextView.text = ""
+        descriptionTextView.text = ""
+        priorityTextView.text = ""
+        deadlineTextView.text = ""
+    }
+
+    private fun showTaskDetails() {
+        taskIdTextView.visibility = View.VISIBLE
+        taskNameTextView.visibility = View.VISIBLE
+        descriptionTextView.visibility = View.VISIBLE
+        priorityTextView.visibility = View.VISIBLE
+        deadlineTextView.visibility = View.VISIBLE
+    }
+
+    private fun hideTaskDetails() {
+        taskIdTextView.visibility = View.GONE
+        taskNameTextView.visibility = View.GONE
+        descriptionTextView.visibility = View.GONE
+        priorityTextView.visibility = View.GONE
+        deadlineTextView.visibility = View.GONE
     }
 }

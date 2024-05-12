@@ -101,4 +101,18 @@
             android:text="Deadline:" />
     </LinearLayout>
 
+    <!-- No result found message -->
+    <TextView
+        android:id="@+id/no_result_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No result found"
+        android:textSize="20sp"
+        android:textColor="#111"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/search_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
