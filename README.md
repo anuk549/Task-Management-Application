@@ -14,3 +14,4 @@ This is a task management application built for Android using Kotlin. It allows 
 - Search tasks.
 
 
+![Add](https://github.com/anuk549/Task-Management-Application/assets/130187871/5151481b-c309-4892-8af9-a529d4da3f60)
